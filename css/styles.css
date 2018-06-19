@@ -131,6 +131,8 @@ nav h1 a {
 
 /* ====================== Restaurant Listing ====================== */
 #restaurants-list {
+  display: grid;
+  grid-template-columns: 1fr;
   background-color: #f3f3f3;
   list-style: outside none none;
   margin: 0;
@@ -145,7 +147,6 @@ nav h1 a {
   min-height: 380px;
   padding: 0 30px 25px;
   text-align: left;
-  width: 270px;
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
@@ -180,6 +181,22 @@ nav h1 a {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+@media all and (min-width: 600px) and (max-width: 949px) {
+  #restaurants-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media all and (min-width: 950px) and (max-width: 1199px) {
+  #restaurants-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media all and (min-width: 1200px) {
+  #restaurants-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 /* ====================== Restaurant Details ====================== */
